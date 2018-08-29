@@ -1,0 +1,115 @@
+@import "../variables";
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url("../../fonts/Poppins-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Poppins-Bold";
+  src: url("../../fonts/Poppins-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Poppins-SemiBold";
+  src: url("../../fonts/Poppins-SemiBold.ttf");
+}
+
+$primary-font: Poppins-Regular;
+$Bold-font: Poppins-Bold;
+$SemiBold-font: Poppins-SemiBold;
+.header {
+  background-image: url("../../assets/Images/shows.png");
+  padding: 0;
+}
+.black-film {
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  min-height: inherit;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 1vw 8vw 10vw 8vw;
+}
+.center-info {
+  display: flex;
+  flex-direction: column;
+  width: inherit;
+  min-height: 30vw;
+  height: auto;
+}
+
+.center-info-table__show-label{
+font-size: $h2;
+font-family: $Bold-font;
+}
+.show-info-table__show-item--button {
+  @include button();
+  background: $gray;
+}
+.show-info-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.show-info-table__row {
+  border-bottom: $btndiv solid 1px;
+  display: flex;
+  justify-content: space-between;
+  padding: 1vw 0vw;
+}
+.show-info-table__date-heading{
+  width: 30%;
+  text-align: left;
+}
+.show-info-table__show-item--place{
+  font-family: $primary-font;
+  font-weight: normal;
+}
+.show-info-table__location-heading{
+  width: 30%;
+  text-align: left;
+}
+.show-info-table__location{
+  font-family: $primary-font;
+  font-weight: normal;
+}
+.show-info-table__button-heading{
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 750px) {
+  .show-info-table__show-item--button{
+      width: 158px;
+      height: 48px;
+  }
+
+  .center-info-table__show-label, .show-info-table__date-heading, .show-info-table__location-heading{
+    text-align: center;
+  }
+  .black-film{
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .show-info-table__show-item--button{
+      width: 118px;
+      height: 38px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .show-info-table__row{
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+  .contact__label{
+      font-size: 3rem;
+      margin: 0px;
+  }
+  .show-info-table__location-heading{
+    margin: 8px;
+}
+}

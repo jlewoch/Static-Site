@@ -1,0 +1,56 @@
+
+
+// variables for colors used in style
+$black: #000000;
+$footer: #272727;
+$gray: #A0A0A0;
+$btndiv: #D7D7D7;
+$mainback:#F9F9F9;
+$white: #FFFFFF;
+$mainparagraphsize: 1.25em;
+$copyright: .625em;
+$h4-paragraph1: 1.5em;
+$h3: 2.25em;
+$h2: 4em;
+$h1: 5.25em;
+$labelsnav: 1.125em;
+$comments: .75em;
+$commentuser: .875em;
+$primary-font: Poppins-Regular;
+$Bold-font: Poppins-Bold;
+$SemiBold-font: Poppins-SemiBold;
+
+
+@mixin main-block-containers {
+    width: 100%;
+    height: auto;
+    padding-left: 6vw;
+}
+@mixin small-info-container(){
+    display: inline-block;
+    width: 30%;
+}
+
+@mixin big-info-container(){
+    width: 60%;
+    height: 100%;
+    font-size: 1.25vmax;
+    margin: 0px;
+    padding-left: 4vw;
+}
+@mixin label() {
+    width: 100vw;
+    font-weight: bold;
+}
+@mixin button() {
+    width: 198px;
+    height: 58px;
+    color: $white;
+    opacity: 40%;
+    border-radius: 4px;
+    white-space: nowrap;
+    margin: 0px;
+    font-family: $SemiBold-font;
+    font-size: $labelsnav;
+    letter-spacing: 1px;
+}
